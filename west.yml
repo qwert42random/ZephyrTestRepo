@@ -1,0 +1,29 @@
+manifest:
+  defaults:
+    remote: upstream
+
+  remotes:
+    - name: upstream
+      url-base: https://github.com/zephyrproject-rtos
+
+  projects:
+    - name: cmsis_6
+      repo-path: CMSIS_6
+      revision: b2dfbe1a20bbd49c2d2c605073799671074bbb30
+      path: modules/hal/cmsis_6
+
+    - name: hal_st
+      revision: e9f0468ade3c06d5e3961e3821543dd67c7ea7f0
+      path: modules/hal/st
+
+    - name: hal_stm32
+      revision: 40b720b80ab8f399263998dfc9a0e8a2bfc7a729
+      path: modules/hal/stm32
+
+    - name: zephyr
+      url: https://github.com/zephyrproject-rtos/zephyr
+      revision: 3ae1585e24ae7339f390604c7912d87bb09d053c
+      west-commands: scripts/west-commands.yml
+
+  self:
+    path: example_workspace
